@@ -1,0 +1,382 @@
+/* Defaults */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  p {
+    color: #252525;
+    line-height: 1.5em;
+  }
+  
+  h1 {
+    font-size: 3em;
+  }
+  
+  h2 {
+    font-size: 2em;
+    font-weight: normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  nav {
+    font-family: "Saira Extra Condensed", sans-serif;
+  }
+  
+  /* Responsive images */
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Header logo/hiding menu */
+  
+  /* #start-logo {
+    position: absolute;
+    width: 14em;
+    top: 65px;
+    left: calc(50% - 7em);
+    z-index: 1;
+  } */
+  
+  header {
+    display: flex;
+    position: fixed;
+    margin: 0 4em;
+    padding: 10px;
+    width: calc(100vw - 8em);
+    color: #fff;
+    background-color: rgba(37, 37, 37, 0.8);
+    border-radius: 0 0 1em 1em;
+    z-index: 2;
+    transform: translateY(-2.5em);
+    transition: .5s;
+  }
+  
+  header:hover {
+    transform: translateY(0);
+  }
+  
+  header.active {
+    transform: translateY(0);
+  }
+  
+  header .logo {
+    flex-grow: 1;
+    padding-top: 0.25em;
+  }
+  header .logo img {
+    width: 8em;
+  }
+  header nav {
+    display: flex;
+  }
+  
+  .nav-item {
+    height: 1.5em;
+    margin: 0 1.5em 0 0;
+  }
+  
+  .nav-item a {
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 1s;
+  }
+  .nav-item a:hover {
+    color: #202b47;
+    background-color: #fff;
+    box-shadow: #d3d3d3;
+  }
+  
+  /* Basic Flex Constructs */
+  
+  .flex {
+    display: flex;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .flex {
+      flex-flow: column wrap;
+      align-items: center;
+      padding: 0 15px;
+    }
+  }
+  
+  /* Sections */
+  section {
+    box-sizing: border-box;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+  }
+  section h2 {
+    text-align: center;
+    position: relative;
+    margin: 60px 0;
+  }
+  section h2:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 60px;
+    height: 1px;
+    background-color: #f39c12;
+    left: 50%;
+    margin-left: -30px;
+  }
+  
+  /* #carousel {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  #carousel #carousel-text {
+    position: absolute;
+    top: 45vh;
+    color: #fff;
+    text-shadow: 2px 2px #252525;
+    z-index: 1;
+  }
+  
+  #carousel .carousel-image {
+    position: absolute;
+    display: block;
+    margin: auto;
+    min-width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition:1;
+  }
+  
+  #carousel .carousel-image.hidden {
+    opacity: 0;
+    
+  } */
+  
+  #about {
+    background-color: #f1f1f1;
+    padding: 20px 20px 0 20px;
+  }
+  #about p {
+    flex: 3;
+  }
+  #about #aboutmockup {
+    flex: 2;
+    align-self: flex-end;
+    transform: translateX(35em);
+    transition: 2s;
+  }
+  #about #aboutmockup.active{
+    transform: translateX(0);
+  }
+  
+  #about img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  #products {
+    height: 100%;
+    color: #252525;
+  }
+  #products .wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #products .products-profile {
+    flex: 0 0 100%;
+    /* transition: 1s; */
+  }
+  
+  .products-profile{
+    transition: 1s;
+  } 
+  
+  .products-profile:hover {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+ 
+  @media (min-width: 960px) {
+    #products .products-profile {
+      flex: 0 0 33%;
+    }
+  }
+
+  #products .products-profile .headshot {
+    height: 5em;
+    width: 5em;
+    margin-left: calc(50% - 2.5em);
+    padding-top: 10px;
+  }
+  #products .products-profile .products-name {
+    text-align: center;
+    font-size: 2em;
+  }
+  #products .products-profile .products-bio {
+    width: calc(100% - 5em);
+    margin-left: 2.5em;
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 40px
+  }
+  
+  .footer {
+    width: 100vw;
+    height: 6em;
+    background-color: #252525;
+    color: #fff;
+  }
+  
+
+  header .logo img {
+     width: 2em;
+}
+
+.imgstyle{
+    padding-left:150px;
+    padding-right: 150px;
+    /* height:200px; */
+    padding-top:20px
+}
+
+
+/* .object-fit-fill {
+    object-fit: fill;
+  }
+  
+  .object-fit-contain {
+    object-fit: contain;
+  }
+  
+  .object-fit-cover {
+    object-fit: cover;
+  }
+  
+  .object-fit-none {
+    object-fit: none;
+  }
+  
+  .object-fit-scale-down {
+    object-fit: scale-down;
+  }
+   */
+
+   @import url(https://fonts.googleapis.com/css?family=Expletus+Sans:600);
+   /*==========SCALE-IN==========*/
+   @-webkit-keyframes scale-in {
+        0%   {transform: scale(10, 10); opacity: 0;}
+       100% {transform: scale(1, 1); opacity: 1;}
+   }
+   
+   @keyframes scale-in {
+       0%   {transform: scale(10, 10); opacity: 0;}
+       100% {transform: scale(1, 1);  opacity: 1;}
+   }
+   /*==========ROLL-OUT==========*/
+   @-webkit-keyframes roll-out {
+       0%   {width: 0;}
+       100% {width: 100%; }
+   }
+   @keyframes roll-out {
+       0%   {width: 0;}
+       100% {width: 100%; }
+   }
+
+   main{
+     width: 100%;
+     overflow: hidden;
+     font-family: 'Arial';
+     background: #392f28;
+   }
+   .hero{
+
+     width: 100%;
+     max-width: 1200px;
+     height: 510px;
+     text-align: left;
+     margin: 0 auto;
+     position: relative; 
+   }
+   
+   .hero h1 {
+     padding-left: 20px;
+     font-size: 4.1em;
+     margin: auto;
+     position: absolute; 
+     top: 120px;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: 1;
+   }
+
+.hero .btn {
+    position: absolute;
+    top: 52%;
+    left: 2%;
+    transform: translate(5%, 100%);
+    -ms-transform: translate(10%, 10%);
+    font-size: 16px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    border: none;
+    margin: auto;
+    text-align: center;
+    z-index: 1;
+    
+}
+   .hero  p{
+    padding-left: 20px;
+     font-size: 1.5em;
+     margin: auto;
+     position: absolute; 
+     top: 220px;
+     left: 0;
+     right: 0;
+     bottom: 0;
+      z-index: 1;
+   }
+   .hero img{
+     width: 100%;
+   }
+
+   .hero h1, .hero p{
+     -webkit-animation: scale-in 1.3s ease-out;
+     -moz-animation: scale-in 1.3s  ease-out;
+       animation: scale-in 1.3s ease-out; 
+   }
+   
+   
+   @media all and (max-width: 768px) {
+     .hero{
+       height: 50vw;
+     }
+     .bar{
+       height: 26vw;
+       top: 10vw;
+     }
+     .hero h1{
+       font-size: 8vw;
+       top: 13vw;
+     }
+     .hero p{
+       font-size: 3vw;
+       top: 27vw;
+     }
+    
+   }
