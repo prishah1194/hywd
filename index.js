@@ -9,24 +9,6 @@ window.addEventListener('scroll', function() {
         header.classList.remove("active");
     }
 }) 
-// const carouselImage=document.querySelectorAll(".carousel-image");
-// var count = 0;
-// var previous;
-// setInterval(function(arr){
-//     arr=carouselImage;
-//     if (count === 0) {
-//         previous = 3;
-//     } else {
-//         previous = count - 1;
-//     }
-//     carouselImage[previous].classList.add("hidden");
-//     carouselImage[count].classList.remove("hidden");
-//     if (count === 3) {
-//         count = 0
-//     } else {
-//         count += 1
-//     }
-// }, 3000);
 function Redirect() {
     window.location="https://www.hayward-pool.com/shop/en/pools/res-in-ground/res-sanitization";
  }

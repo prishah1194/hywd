@@ -3,7 +3,6 @@
   }
   
   body {
-    margin: 0;
     font-family: Helvetica, Arial, sans-serif;
   }
   
@@ -30,7 +29,6 @@
   
   img {
     max-width: 100%;
-    height: auto;
   }
   
   header {
@@ -46,15 +44,12 @@
     transform: translateY(-2.5em);
     transition: .5s;
   }
-  
   header:hover {
     transform: translateY(0);
   }
-  
   header.active {
     transform: translateY(0);
   }
-  
   header .logo {
     flex-grow: 1;
     padding-top: 0.25em;
@@ -65,12 +60,10 @@
   header nav {
     display: flex;
   }
-  
   .nav-item {
     height: 1.5em;
     margin: 0 1.5em 0 0;
   }
-  
   .nav-item a {
     font-size: 1.3em;
     color: #fff;
@@ -85,12 +78,14 @@
     box-shadow: #d3d3d3;
   }
   
-  /* Basic Flex Constructs */
   
   .flex {
     display: flex;
   }
-  
+  .flex p{
+    padding-left:20px; 
+    padding-bottom:30px
+  }
   @media screen and (max-width: 600px) {
     .flex {
       flex-flow: column wrap;
@@ -98,8 +93,6 @@
       padding: 0 15px;
     }
   }
-  
-  /* Sections */
   section {
     box-sizing: border-box;
     position: relative;
@@ -165,9 +158,7 @@
     background-color: #f39c12;
     color: white;
   }
-  
- 
-  @media (min-width: 960px) {
+@media (min-width: 960px) {
     #products .products-profile {
       flex: 0 0 33%;
     }
@@ -199,7 +190,7 @@
   }
   
 
-  header .logo img {
+header .logo img {
      width: 2em;
 }
 
@@ -275,6 +266,7 @@
    .hero  p{
     padding-left: 20px;
      font-size: 1.5em;
+     width: 1540px;
      margin: auto;
      position: absolute; 
      top: 220px;
@@ -290,7 +282,7 @@
    .hero h1, .hero p{
      -webkit-animation: scale-in 1.3s ease-out;
      -moz-animation: scale-in 1.3s  ease-out;
-       animation: scale-in 1.3s ease-out; 
+    animation: scale-in 1.3s ease-out; 
    }
    
    
